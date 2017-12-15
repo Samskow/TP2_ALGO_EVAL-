@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c0E-cy-UqN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMQ-pD-PuL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JDY-6D-FIf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eval_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mb9-jW-j67">
+                                            <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="Mj7-La-zc3"/>
+                                                <constraint firstAttribute="height" constant="200" id="PVs-c0-f5R"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mb9-jW-j67" firstAttribute="centerX" secondItem="JDY-6D-FIf" secondAttribute="centerX" id="6bH-Rs-Q8g"/>
+                                        <constraint firstItem="mb9-jW-j67" firstAttribute="centerY" secondItem="JDY-6D-FIf" secondAttribute="centerY" id="wCZ-Th-UhQ"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kMQ-pD-PuL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9iW-dv-ndd"/>
+                            <constraint firstItem="c0E-cy-UqN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="A9S-Qg-fJx"/>
+                            <constraint firstItem="kMQ-pD-PuL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="McY-sz-q6I"/>
+                            <constraint firstItem="c0E-cy-UqN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="R9e-HA-Cpv"/>
+                            <constraint firstItem="c0E-cy-UqN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rzy-GJ-U1K"/>
+                            <constraint firstItem="c0E-cy-UqN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="glM-zc-dDN"/>
+                            <constraint firstItem="kMQ-pD-PuL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rp8-UP-x0c"/>
+                            <constraint firstItem="kMQ-pD-PuL" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ztV-jw-W6G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eval_logo.png" width="1024" height="1024"/>
+        <image name="note.jpg" width="1050" height="701"/>
+    </resources>
+</document>
