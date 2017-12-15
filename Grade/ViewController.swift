@@ -39,7 +39,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{ 
         textField.resignFirstResponder()
         return true
     }
@@ -47,7 +47,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     
-    func loadUserDefault(){
+    func loadUserDefault(){ // sauvegarde
         if userdefaultObj.doesKeyExist(theKey:"grades"){
             studentGrades = userdefaultObj.getValue(theKey:"grades") as! [ViewController.studenName : [ViewController.cours : ViewController.grade]]
             
@@ -66,13 +66,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // lorsque l'on sélectionne l'élève
         let name = [studenName](studentGrades.keys)[indexPath.row]
         userdefaultObj.setKey(theValue: name as AnyObject, theKey: "name")
         performSegue(withIdentifier: "seg", sender: nil)
     }
     
-    @IBAction func add_student(_ sender: UIButton) {
+    @IBAction func add_student(_ sender: UIButton) {// bouton pour ajouter les éleves
         if student_name_field.text != "" {
             studentGrades[student_name_field.text!] = [cours:grade]()
             student_name_field.text = ""

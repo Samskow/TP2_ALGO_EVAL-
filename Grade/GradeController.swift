@@ -55,30 +55,23 @@ class GradeController: UIViewController,UITableViewDelegate,UITableViewDataSourc
     
     //-------
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
         let cell:UITableViewCell = course_grade_tableview.dequeueReusableCell(withIdentifier: "proto")!
-        
         if let aCourse = cell.viewWithTag(100) as! UILabel!{
             aCourse.text = arrayOfCourse[indexPath.row]
         }
         if let aGrade = cell.viewWithTag(101) as! UILabel!{
             aGrade.text = String(arrayOfGrades[indexPath.row])
         }
-        
         return cell
     }
     //-------
     func loadUserDefault(){
         if userdefaultObj.doesKeyExist(theKey:"grades"){
             studentGrades = userdefaultObj.getValue(theKey:"grades") as! [ViewController.studenName : [ViewController.cours : ViewController.grade]]
-            
         }else{
             studentGrades = [studenName:[cours:grade]]()
         }
-        
     }
-    
     
     //-------
     func faireMoyenne() {
@@ -102,7 +95,6 @@ class GradeController: UIViewController,UITableViewDelegate,UITableViewDataSourc
         let courses_and_grades = studentGrades[name!]
         arrayOfCourse = [cours](courses_and_grades!.keys)
         arrayOfGrades = [cours](courses_and_grades!.values)
-        
     }
     //-------
     
@@ -111,8 +103,6 @@ class GradeController: UIViewController,UITableViewDelegate,UITableViewDataSourc
         var student_courses = studentGrades[name]!
         student_courses[courseField.text!] = gradeField.text!
         studentGrades[name] = student_courses
-        
-        
         userdefaultObj.setKey(theValue: studentGrades as AnyObject, theKey: "grades") //sauvegarde
         fillUpArray()
         course_grade_tableview.reloadData()
